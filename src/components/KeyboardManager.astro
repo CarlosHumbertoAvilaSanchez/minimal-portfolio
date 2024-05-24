@@ -1,0 +1,29 @@
+<footer></footer>
+
+<ninja-keys hideBreadcrumbs> </ninja-keys>
+<script>
+    import "ninja-keys";
+
+    const ninja = document.querySelector("ninja-keys");
+    if (ninja) {
+        ninja.data = [
+            {
+                id: "print",
+                title: "Print",
+                hotkey: "Ctrl+P",
+                section: "Actions",
+                handler: () => {
+                    window.print();
+                },
+            },
+        ];
+    }
+</script>
+
+<style>
+    @media print {
+        ninja-keys {
+            display: none;
+        }
+    }
+</style>
